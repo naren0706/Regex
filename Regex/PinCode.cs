@@ -11,7 +11,7 @@ namespace Regexs
     {
         public PinCode() 
         {
-            string regex = "^[0-9]{6}$";
+            string regex = "^[0-9]{6} || [0-9]{3}[ ][0-9]{3}$";
             Console.WriteLine("Enter the pin code");
             string input = Console.ReadLine();
             Regex re = new Regex(regex);
