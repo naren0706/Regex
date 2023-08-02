@@ -37,5 +37,16 @@ namespace Regexs
             else
                 Console.WriteLine("not valid email");
         }
+        public void EmailUC4()
+        {
+            string actualRegex = "^[a-z]+[._+-]{0,1}[a-z]+[@]{1}[a-z]+[.]{1}[a-z]{2,3}([.]{1}[a-z]{2}){0,1}$";
+            Console.WriteLine("Enter the email");
+            string input = Console.ReadLine();
+            Regex re = new Regex(actualRegex);
+            if (re.IsMatch(input))
+                Console.WriteLine("Valid email");
+            else
+                Console.WriteLine("not valid email");
+        }
     }
 }

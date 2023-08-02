@@ -19,10 +19,9 @@ namespace Regexs
                         break;
                     case 2:
                         Email email = new Email();
-                        email.EmailUC3();
+                        email.EmailUC4();
                         break;
                 }
-
             }
         }
     }
