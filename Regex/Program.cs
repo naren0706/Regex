@@ -5,6 +5,7 @@ namespace Regexs
 {
     class Program
     {
+        const string FILEPATH = @"E:\BridgeGateProblems\Regex\Regex\email.txt";
         static void Main(string[] args)
         {
             bool flag = true;
@@ -19,7 +20,11 @@ namespace Regexs
                         break;
                     case 2:
                         Email email = new Email();
-                        email.EmailUC4();
+                        string[] emails = File.ReadAllText(FILEPATH).Split(",");
+                        foreach (var item in emails)
+                        {
+                            email.Validate(item);
+                        }
                         break;
                 }
             }

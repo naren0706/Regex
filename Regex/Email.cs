@@ -48,5 +48,15 @@ namespace Regexs
             else
                 Console.WriteLine("not valid email");
         }
+
+        internal void Validate(string input)
+        {
+            string actualRegex = @"^[^.]([a-z0-9\-+]{0,})[\.]{0,1}([a-z0-9\-+]{1,})(@{1}[a-z0-9]{1,})(\.)([a-z]{0,}[\.]{0,1}[a-z]{2,})]{0,}$";
+            Regex re = new Regex(actualRegex);
+            if (re.IsMatch(input))
+                Console.WriteLine(input + " is Valid email");
+            else
+                Console.WriteLine(input +" is not valid email");
+        }
     }
 }
