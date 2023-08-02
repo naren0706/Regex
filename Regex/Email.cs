@@ -26,5 +26,16 @@ namespace Regexs
             else
                 Console.WriteLine("not valid email");
         }
+        public void EmailUC3()
+        {
+            string UC3_regex = "^[.]{1}[a-z]{2}$";
+            Console.WriteLine("Enter the email");
+            string input = Console.ReadLine();
+            Regex re = new Regex(UC3_regex);
+            if (re.IsMatch(input))
+                Console.WriteLine("Valid email");
+            else
+                Console.WriteLine("not valid email");
+        }
     }
 }
