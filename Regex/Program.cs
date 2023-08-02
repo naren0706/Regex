@@ -19,7 +19,7 @@ namespace Regexs
                         break;
                     case 2:
                         Email email = new Email();
-                        email.EmailUC1();
+                        email.EmailUC2();
                         break;
                 }
 

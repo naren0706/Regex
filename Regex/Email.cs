@@ -15,5 +15,16 @@ namespace Regexs
             else
                 Console.WriteLine("not valid email");
         }
+        public void EmailUC2()
+        {
+            string UC2_regex = "^[@]{1}[a-z]{0,}$";
+            Console.WriteLine("Enter the email");
+            string input = Console.ReadLine();
+            Regex re = new Regex(UC2_regex);
+            if (re.IsMatch(input))
+                Console.WriteLine("Valid email");
+            else
+                Console.WriteLine("not valid email");
+        }
     }
 }
